@@ -1,5 +1,12 @@
 .card-title{
-  background-color: orange;
+  background-image: linear-gradient(to right, white, orange);
   text-align: center;
   padding: 5px;
+}
+
+.card{
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 9px 7px 5px lightgray;
+  -moz-box-shadow:    9px 7px 5px lightgray;
+  box-shadow:         9px 7px 5px lightgray;
 }
