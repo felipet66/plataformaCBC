@@ -1,0 +1,47 @@
+<div class="fixed-top">
+    <nav class="navbar navbar-light bg-faded">
+          <div class="col-md-4">
+              <a routerLink="/" class="navbar-brand">
+                <img src="/assets/logo.svg" />
+              </a>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Pesquise por ofertas..." #termoDaPesquisa (keyup)="pesquisa(termoDaPesquisa.value)">
+            <ul class="list-group" style="position: absolute; z-index: 999;">
+              <a [routerLink]="['/oferta', oferta.id]" class="list-group-item list-group-item-action" *ngFor="let oferta of ofertas" (click)="limpaPesquisa()">{{ oferta.descricao_oferta | descricaoReduzida: 15 }}</a>
+            </ul>
+          </div>
+          <div class="col-md-2" align="right">
+            <a a href="#"><img src="/assets/carrinho.png" /></a>
+          </div>
+    </nav>
+
+    <div class="menu">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/restaurantes">Restaurantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/diversao">Diversão</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/mercado-brasil">Mercado Brasil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/transferido-porto">Transferido Porto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/mercado-externo">Mercado Externo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/negocios-fechados">Negocios Fechados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="/assets/banners/img_5.jpg" />
+  </div>
